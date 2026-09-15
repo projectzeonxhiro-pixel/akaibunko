@@ -2,1025 +2,1319 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>赤居文庫｜本と珈琲とインクの匂い</title>
-<meta name="description" content="赤居文庫｜本と珈琲とインクの匂い。静かにページをめくり、珈琲を味わうための時間をご案内します。">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2">
+<title>Cafe 赤居文庫｜本と珈琲とインクの匂い｜コンセプトLP</title>
+<meta name="description" content="秋田市中通、本とアンティークに囲まれたブックカフェ「Cafe赤居文庫」。豆を挽いてから淹れるハンドドリップ珈琲と、テーマ別の貸本を楽しみながら長時間過ごせます。">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b1714">
 <style>
   :root {
-    --color-ivory: #f4ecdf;
-    --color-ivory-deep: #ece0cc;
-    --color-brown: #3b2a20;
-    --color-brown-soft: #5a4433;
-    --color-ink: #1b1613;
-    --color-red: #7a1f1f;
-    --color-red-soft: #93342f;
+    --color-ink: #2b241f;
+    --color-muted: #6b5f52;
+    --color-paper: #f7f1e6;
+    --color-paper-deep: #efe4cf;
+    --color-surface: #fbf7ee;
+    --color-accent: #a8322b;
+    --color-accent-deep: #7c231d;
+    --color-accent-brass: #a78352;
+    --color-brass: #8c6a3f;
+    --color-border: #ddd0b3;
+    --color-proposal-bg: #26312c;
+    --color-proposal-border: #789083;
+    --color-proposal-text2: #5e7267;  /* 明るい地の上に置く文字用 */
+    --color-proposal-ink: #edf3ef;
+    --color-dark-bg: #1b1714;
+    --color-dark-surface: #28201b;
+    --color-dark-border: #4b3c31;
+    --color-light-text: #f4ecdf;
+    --color-muted-dark: #c4b6a4;
   }
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
 
   body {
-    font-family: "Hiragino Mincho ProN", "Yu Mincho", "游明朝", serif;
-    background-color: var(--color-ivory);
-    background-image:
-      radial-gradient(ellipse at top left, rgba(122, 31, 31, 0.05) 0%, transparent 45%),
-      radial-gradient(ellipse at bottom right, rgba(59, 42, 32, 0.07) 0%, transparent 50%),
-      radial-gradient(ellipse at center, rgba(244, 236, 223, 1) 0%, rgba(230, 218, 198, 1) 100%);
-    background-attachment: fixed;
+    margin: 0;
+    background: var(--color-paper);
     color: var(--color-ink);
-    line-height: 1.9;
-    letter-spacing: 0.03em;
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
 
+  h1, h2, h3, h4 {
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", "游明朝", serif;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+    color: var(--color-ink);
+  }
+
+  p { margin: 0; }
+
+  a { color: var(--color-accent-deep); }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible {
+    outline: 3px solid var(--color-accent-deep);
+    outline-offset: 3px;
+  }
+
   img {
+    display: block;
+    width: 100%;
     max-width: 100%;
-    display: block;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .inner {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 24px;
-    position: relative;
-  }
-
-  /* 紙の質感 */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.05;
-    background-image:
-      repeating-linear-gradient(0deg, rgba(0,0,0,0.4) 0px, transparent 1px, transparent 2px, rgba(0,0,0,0.4) 3px),
-      repeating-linear-gradient(90deg, rgba(0,0,0,0.2) 0px, transparent 1px, transparent 3px);
-    mix-blend-mode: multiply;
-  }
-
-  /* 本のページを思わせる薄い罫線模様 */
-  body {
-    background-image:
-      radial-gradient(ellipse at top left, rgba(122, 31, 31, 0.05) 0%, transparent 45%),
-      radial-gradient(ellipse at bottom right, rgba(59, 42, 32, 0.07) 0%, transparent 50%),
-      repeating-linear-gradient(0deg, rgba(59, 42, 32, 0.05) 0px, rgba(59, 42, 32, 0.05) 1px, transparent 1px, transparent 34px),
-      linear-gradient(90deg, transparent 0px, transparent 63px, rgba(122, 31, 31, 0.12) 63px, rgba(122, 31, 31, 0.12) 64px, transparent 64px),
-      radial-gradient(ellipse at center, rgba(244, 236, 223, 1) 0%, rgba(230, 218, 198, 1) 100%);
-  }
-
-  /* ビネット（周囲を少し暗く落として奥行きを出す） */
-  body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 9998;
-    box-shadow: inset 0 0 180px rgba(27, 22, 19, 0.22);
-  }
-
-  /* 装飾：インクの染み（ページ随所に薄く配置） */
-  .ink-blot {
-    position: absolute;
-    pointer-events: none;
-    opacity: 0.05;
-    background: radial-gradient(circle, var(--color-ink) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: 0;
-  }
-
-  /* 左上のロゴ */
-  .site-logo {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 50;
-    display: inline-flex;
-  }
-
-  .site-logo img {
-    height: 64px;
-    width: auto;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
-    transition: opacity 0.3s ease;
-  }
-
-  .site-logo:hover img,
-  .site-logo:focus-visible img {
-    opacity: 0.85;
-  }
-
-  /* ファーストビュー */
-  .hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .hero-image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-  }
-
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background:
-      radial-gradient(ellipse at center, transparent 0%, rgba(27, 22, 19, 0.35) 100%),
-      linear-gradient(
-        180deg,
-        rgba(27, 22, 19, 0.55) 0%,
-        rgba(27, 22, 19, 0.72) 55%,
-        rgba(27, 22, 19, 0.88) 100%
-      );
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    color: var(--color-ivory);
-    padding: 32px 24px;
-    max-width: 720px;
-  }
-
-  .hero-content .brand {
-    font-size: clamp(1.8rem, 5vw, 2.8rem);
-    letter-spacing: 0.2em;
-    margin-bottom: 20px;
-  }
-
-  .hero-content .copy {
-    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
-    letter-spacing: 0.15em;
-    margin-bottom: 24px;
-    position: relative;
-    display: inline-block;
-  }
-
-  .hero-content .copy::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 1px;
-    background-color: var(--color-red-soft);
-    margin: 20px auto 0;
-  }
-
-  .hero-content .lead {
-    font-size: 1rem;
-    line-height: 2.1;
-    margin-bottom: 36px;
-    opacity: 0.95;
-    text-wrap: pretty;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    padding: 14px 36px;
-    border: 1px solid var(--color-ivory);
-    color: var(--color-ivory);
-    font-size: 0.95rem;
-    letter-spacing: 0.1em;
-    border-radius: 2px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .btn:hover,
-  .btn:focus-visible {
-    background-color: var(--color-ivory);
-    color: var(--color-ink);
-  }
-
-  .btn-solid {
-    background-color: var(--color-red);
-    border-color: var(--color-red);
-    color: var(--color-ivory);
-  }
-
-  .btn-solid:hover,
-  .btn-solid:focus-visible {
-    background-color: var(--color-red-soft);
-    border-color: var(--color-red-soft);
-    color: var(--color-ivory);
-  }
-
-  /* セクション共通 */
-  section {
-    position: relative;
-    padding: 96px 0;
-  }
-
-  .section-title {
-    text-align: center;
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
-    letter-spacing: 0.2em;
-    color: var(--color-brown);
-    margin-bottom: 16px;
-  }
-
-  .section-title::after {
-    content: "❧";
-    display: block;
-    font-size: 1.1rem;
-    color: var(--color-red);
-    margin: 14px auto 0;
-    opacity: 0.85;
-  }
-
-  .section-lead {
-    text-align: center;
-    max-width: 640px;
-    margin: 0 auto 56px;
-    color: var(--color-brown-soft);
-    font-size: 1rem;
-    text-wrap: pretty;
-  }
-
-  /* コンセプト */
-  .concept {
-    position: relative;
-    background-color: var(--color-ivory-deep);
-    background-image: radial-gradient(circle at 15% 20%, rgba(122, 31, 31, 0.06) 0%, transparent 35%),
-      radial-gradient(circle at 85% 80%, rgba(59, 42, 32, 0.07) 0%, transparent 40%);
-    border-top: 1px solid rgba(59, 42, 32, 0.15);
-    border-bottom: 1px solid rgba(59, 42, 32, 0.15);
-    overflow: hidden;
-  }
-
-  .concept::before {
-    content: "\201C";
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14rem;
-    font-family: Georgia, "Times New Roman", serif;
-    color: var(--color-brown);
-    opacity: 0.06;
-    line-height: 1;
-    pointer-events: none;
-  }
-
-  .concept-text {
-    position: relative;
-    max-width: 680px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.05rem;
-    line-height: 2.3;
-    color: var(--color-ink);
-  }
-
-  .concept-text p {
-    margin-bottom: 28px;
-    text-wrap: pretty;
-  }
-
-  .concept-text p:last-child {
-    margin-bottom: 0;
-  }
-
-  /* カードセクション（共通） */
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-  }
-
-  .card {
-    background-color: var(--color-ivory);
-    border: 1px solid rgba(59, 42, 32, 0.2);
-    border-radius: 6px;
-    box-shadow: 0 6px 16px rgba(27, 22, 19, 0.08);
-    overflow: hidden;
-    text-align: center;
-  }
-
-  .card-photo-wrap {
-    width: 100%;
-    height: 180px;
-    background-color: var(--color-ivory-deep);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .card-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-
-  .card-body {
-    padding: 32px 28px 40px;
-  }
-
-  .card-no-photo .card-body {
-    padding-top: 40px;
-  }
-
-  .card-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--color-red);
-    color: var(--color-red);
-    border-radius: 50%;
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-  }
-
-  .card h3 {
-    font-size: 1.15rem;
-    letter-spacing: 0.1em;
-    color: var(--color-brown);
-    margin-bottom: 14px;
-  }
-
-  .card p {
-    font-size: 0.92rem;
-    color: var(--color-brown-soft);
-    line-height: 1.9;
-    text-wrap: pretty;
-  }
-
-  /* 赤居文庫が選ばれる3つの理由 */
-  .reasons {
-    position: relative;
-    background-color: var(--color-ivory-deep);
-    background-image: radial-gradient(circle at 90% 10%, rgba(122, 31, 31, 0.06) 0%, transparent 40%);
-    border-top: 1px solid rgba(59, 42, 32, 0.15);
-    border-bottom: 1px solid rgba(59, 42, 32, 0.15);
-  }
-
-  /* 赤居文庫での過ごし方 */
-  .stay {
-    position: relative;
-    background-image: repeating-linear-gradient(135deg, rgba(122, 31, 31, 0.025) 0px, rgba(122, 31, 31, 0.025) 1px, transparent 1px, transparent 14px);
-  }
-
-  /* おすすめメニュー */
-  .menu {
-    position: relative;
-    background-color: var(--color-ivory);
-    background-image: radial-gradient(ellipse at 10% 90%, rgba(122, 31, 31, 0.05) 0%, transparent 45%);
-  }
-
-  .menu-feature {
-    max-width: 720px;
-    margin: 0 auto;
-    background-color: var(--color-ivory-deep);
-    border: 1px solid rgba(59, 42, 32, 0.2);
-    border-radius: 6px;
-    box-shadow: 0 6px 16px rgba(27, 22, 19, 0.08);
-    overflow: hidden;
-  }
-
-  .menu-feature img {
-    width: 100%;
     height: auto;
   }
 
-  .menu-feature-body {
-    padding: 32px 32px 36px;
-    text-align: center;
-  }
-
-  .menu-feature-body h3 {
-    font-size: 1.2rem;
-    letter-spacing: 0.1em;
-    color: var(--color-brown);
-    margin-bottom: 16px;
-  }
-
-  .menu-feature-body p {
-    font-size: 0.95rem;
-    color: var(--color-brown-soft);
-    line-height: 1.95;
-    text-wrap: pretty;
-  }
-
-  .menu-note {
-    max-width: 720px;
-    margin: 24px auto 0;
-    text-align: center;
-    font-size: 0.85rem;
-    color: var(--color-brown-soft);
-  }
-
-  /* 店舗案内 */
-  .info {
-    position: relative;
-    background-color: var(--color-brown);
-    background-image:
-      radial-gradient(ellipse at top right, rgba(122, 31, 31, 0.18) 0%, transparent 55%),
-      repeating-linear-gradient(0deg, rgba(0,0,0,0.08) 0px, transparent 1px, transparent 6px, rgba(0,0,0,0.08) 7px);
-    color: var(--color-ivory);
-  }
-
-  .info .section-title {
-    color: var(--color-ivory);
-  }
-
-  .info .section-title::after {
-    color: var(--color-ivory);
-  }
-
-  .info-text {
-    max-width: 680px;
-    margin: 0 auto 48px;
-    text-align: center;
-    line-height: 2.2;
-    color: var(--color-ivory-deep);
-    text-wrap: pretty;
-  }
-
-  .info-detail {
-    max-width: 560px;
-    margin: 0 auto 32px;
-    border-top: 1px solid rgba(244, 236, 223, 0.25);
-  }
-
-  .info-detail dl {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 16px 20px;
-    padding: 28px 0;
-    border-bottom: 1px solid rgba(244, 236, 223, 0.25);
-  }
-
-  .info-detail dt {
-    color: var(--color-ivory);
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
-    opacity: 0.85;
-  }
-
-  .info-detail dd {
-    color: var(--color-ivory-deep);
-    font-size: 0.92rem;
-    line-height: 1.9;
-  }
-
-  .info-detail dd a {
-    border-bottom: 1px solid rgba(244, 236, 223, 0.5);
-  }
-
-  .info-detail dd a:hover,
-  .info-detail dd a:focus-visible {
-    color: var(--color-ivory);
-    border-color: var(--color-ivory);
-  }
-
-  .info-note {
-    max-width: 560px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 0.88rem;
-    padding: 18px 24px;
-    border: 1px solid rgba(244, 236, 223, 0.4);
-    border-radius: 4px;
-    color: var(--color-ivory-deep);
-  }
-
-  /* 店舗案内：地図 */
-  .info-map {
-    max-width: 680px;
-    margin: 0 auto 32px;
-    border-radius: 6px;
+  .media {
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(244, 236, 223, 0.25);
   }
-
-  .info-map-frame-wrap {
-    position: relative;
+  .media img {
     width: 100%;
-    padding-top: 56.25%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  .info-map-frame-wrap iframe {
+  .hero-content {
+    text-align: center;
+    color: #fdf8f1;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+  }
+  .hero .hero-content .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: #e2c79a;
+    margin: 0 0 6px;
+  }
+  .hero .hero-content h1 {
+    font-size: clamp(28px, 6.2vw, 52px);
+    letter-spacing: 0.04em;
+    margin: 0;
+    color: #fdf8f1;
+  }
+  .hero .hero-content .catch {
+    margin: 10px 0 0;
+    font-size: clamp(14px, 3vw, 19px);
+    color: #efe2cf;
+  }
+  .hero .hero-catch {
+    margin: clamp(16px, 3vh, 26px) auto 0;
+    max-width: 24em;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", "游明朝", serif;
+    font-size: clamp(17px, 3.4vw, 30px);
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+  }
+  .concept-media {
+    aspect-ratio: 16 / 10;
+    margin-bottom: 8px;
+  }
+  .card-media {
+    aspect-ratio: 4 / 3;
+    margin-bottom: 14px;
+  }
+  .story-media {
+    aspect-ratio: 16 / 10;
+    margin: 20px 0 8px;
+  }
+  .specialty-media {
+    aspect-ratio: 16 / 10;
+    margin-bottom: 8px;
+  }
+  .exp-media {
+    aspect-ratio: 4 / 3;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  .final-media {
+    aspect-ratio: 16 / 9;
+    max-width: 620px;
+    margin: 24px auto 8px;
+  }
+  .img-caption {
+    font-size: 12px;
+    color: var(--color-muted);
+    text-align: center;
+    margin: 0 0 16px;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 5vw, 32px);
+  }
+
+  /* ------- dark theme utility (書斎トーン) ------- */
+  .theme-dark {
+    background-color: var(--color-dark-bg);
+    color: var(--color-muted-dark);
+  }
+  .theme-dark.with-texture {
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.012) 0,
+        rgba(255, 255, 255, 0.012) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+  }
+  .theme-dark h1,
+  .theme-dark h2,
+  .theme-dark h3,
+  .theme-dark h4 { color: var(--color-light-text); }
+  .theme-dark .section-label { color: var(--color-accent-brass); }
+  .theme-dark .section-text,
+  .theme-dark .img-caption { color: var(--color-muted-dark); }
+  .theme-dark a { color: var(--color-light-text); }
+  .theme-dark .btn-outline {
+    border-color: var(--color-light-text);
+    color: var(--color-light-text);
+  }
+  .theme-dark .btn-outline:hover { background: rgba(244, 236, 223, 0.1); }
+  .theme-dark .btn-primary { background: var(--color-accent); color: var(--color-light-text); }
+  .theme-dark .btn-primary:hover { background: var(--color-accent-brass); }
+
+  /* ------- skip link ------- */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--color-ink);
+    color: var(--color-surface);
+    padding: 10px 16px;
+    z-index: 100;
+  }
+  .skip-link:focus { left: 14px; top: 14px; }
+
+  /* ------- proposal label bar ------- */
+  .proposal-flag {
+    background: var(--color-dark-bg);
+    color: var(--color-surface);
+    text-align: center;
+    font-size: clamp(12px, 3vw, 13px);
+    letter-spacing: 0.06em;
+    padding: 8px clamp(14px, 4vw, 20px);
+    line-height: 1.6;
+  }
+
+  /* ------- header ------- */
+  .back-top {
+    font-size: 12px;
+    color: var(--color-muted-dark);
+    text-decoration: underline;
+    overflow-wrap: anywhere;
+  }
+
+  /* ------- book-spine motif divider ------- */
+  .spine-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 4px;
+    padding: 0 14px;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .spine-row span {
+    flex: 1 1 auto;
+    max-width: 26px;
+    border-radius: 3px 3px 0 0;
+  }
+  .spine-row span:nth-child(1) { height: 26px; background: var(--color-accent); }
+  .spine-row span:nth-child(2) { height: 38px; background: var(--color-brass); }
+  .spine-row span:nth-child(3) { height: 20px; background: var(--color-ink); opacity: .75; }
+  .spine-row span:nth-child(4) { height: 32px; background: var(--color-proposal-border); }
+  .spine-row span:nth-child(5) { height: 24px; background: var(--color-accent-deep); }
+  .spine-row span:nth-child(6) { height: 40px; background: var(--color-brass); opacity: .8; }
+  .spine-row span:nth-child(7) { height: 22px; background: var(--color-ink); opacity: .6; }
+  .spine-row span:nth-child(8) { height: 30px; background: var(--color-accent); opacity: .85; }
+
+  /* ------- hero ------- */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(32px, 8vh, 64px) 0 clamp(24px, 6vh, 40px);
+    overflow: hidden;
+  }
+  .hero-photo {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    border: 0;
+    object-fit: cover;
+    z-index: 0;
   }
-
-  /* ギャラリー */
-  .gallery {
+  .hero-photo-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(180deg, rgba(18, 14, 11, 0.58) 0%, rgba(18, 14, 11, 0.72) 45%, rgba(18, 14, 11, 0.86) 100%),
+      radial-gradient(circle at 50% 62%, rgba(18, 14, 11, 0.45), transparent 62%);
+  }
+  .hero > .container {
     position: relative;
-    background-color: var(--color-ivory);
-    background-image: radial-gradient(ellipse at 50% 0%, rgba(122, 31, 31, 0.04) 0%, transparent 50%);
+    z-index: 2;
+  }
+  .hero .hero-note {
+    margin: 22px 0 0;
+    font-size: 12px;
+    text-align: center;
+    color: #c9bbaa;
+  }
+  .hero .eyebrow {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--color-accent-brass);
+    margin-bottom: 8px;
+  }
+  .hero h1 {
+    text-align: center;
+    font-size: clamp(24px, 6.4vw, 36px);
+    letter-spacing: 0.04em;
+    margin-top: 6px;
+  }
+  .hero .catch {
+    text-align: center;
+    margin-top: 12px;
+    font-size: clamp(15px, 4vw, 18px);
+    color: var(--color-muted-dark);
+  }
+  .hero .lead {
+    text-align: center;
+    max-width: 560px;
+    margin: clamp(16px, 3vh, 24px) auto 0;
+    font-size: clamp(14px, 3.6vw, 16px);
+    color: #e6dbcc;
+  }
+  .cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 340px;
+    margin: 26px auto 0;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    line-height: 1.4;
+    cursor: pointer;
+    font-family: inherit;
+    background: transparent;
+  }
+  .btn-primary { background: var(--color-accent-deep); color: var(--color-surface); }
+  .btn-primary:hover { background: var(--color-accent); }
+  .btn-outline {
+    background: transparent;
+    border-color: var(--color-accent-deep);
+    color: var(--color-accent-deep);
+  }
+  .btn-outline:hover { background: var(--color-paper-deep); }
+
+  /* ------- generic section ------- */
+  section { padding: clamp(48px, 7vh, 72px) 0; }
+  .section-label {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--color-accent-deep);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .section-title {
+    font-size: clamp(21px, 5.6vw, 28px);
+    margin-bottom: 22px;
+  }
+  .section-text { max-width: 620px; font-size: 15.5px; }
+  .section-text + .section-text { margin-top: 14px; }
+  .section-text small { font-size: 12.5px; color: var(--color-muted); }
+
+  .surface {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
   }
 
-  .gallery-grid {
+  /* ------- strengths ------- */
+  .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 24px;
+  }
+  .strength-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: clamp(18px, 5vw, 26px);
+    box-shadow: 0 2px 10px rgba(43, 36, 31, 0.05);
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .strength-card .num {
+    font-size: 12px;
+    color: var(--color-accent-deep);
+    letter-spacing: 0.1em;
+  }
+  .strength-card h3 { font-size: 17.5px; line-height: 1.5; margin: 8px 0 10px; }
+  .strength-card p { font-size: 14.5px; color: var(--color-muted); }
+  .strength-card .value-tag {
+    display: inline-block;
+    margin-top: auto;
+    padding-top: 14px;
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: var(--color-accent-deep);
+    border-top: 1px solid var(--color-border);
+    width: 100%;
   }
 
-  .gallery-item {
-    position: relative;
+  /* ------- story ------- */
+  .story-list {
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .story-list li {
+    padding-left: 18px;
+    border-left: 2px solid var(--color-accent);
+    font-size: 15px;
+    color: var(--color-muted-dark);
+  }
+  .story-list .year {
+    display: block;
+    font-size: 12.5px;
+    color: var(--color-accent-brass);
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+
+  /* ------- specialty ------- */
+  .specialty-block {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: clamp(20px, 6vw, 32px);
+    margin-top: 20px;
+  }
+  .specialty-block + .specialty-block { margin-top: 18px; }
+  .specialty-kicker { font-size: 12px; letter-spacing: 0.1em; color: var(--color-accent-deep); }
+  .specialty-block h3 { font-size: 19px; margin: 8px 0 12px; }
+  .specialty-block p { font-size: 15px; }
+  .specialty-block p + p { margin-top: 10px; }
+  .specialty-meta {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--color-border);
+    font-size: 13.5px;
+    color: var(--color-muted);
+  }
+
+  /* ------- experience ------- */
+  .exp-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 22px;
+  }
+  .exp-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 8px;
+    background: var(--color-paper-deep);
+  }
+  .exp-item .mark {
+    flex: none;
+    width: 30px;
+    height: 40px;
+    border-radius: 2px 6px 6px 2px;
+    background: var(--color-accent);
+    opacity: 0.85;
+  }
+  .exp-item .exp-thumb {
+    flex: none;
+    width: 44px;
+    height: 44px;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 6px 16px rgba(27, 22, 19, 0.1);
   }
-
-  .gallery-item img {
+  .exp-item .exp-thumb img {
     width: 100%;
-    height: 260px;
+    height: 100%;
     object-fit: cover;
   }
+  .exp-item p { font-size: 14.5px; }
+  .exp-item h3 { font-size: 16px; margin-bottom: 6px; }
 
-  .gallery-caption {
+  /* ------- proposal / demo section ------- */
+  .proposal-section {
+    background: var(--color-proposal-bg);
+    border-top: 1px solid var(--color-proposal-border);
+    border-bottom: 1px solid var(--color-proposal-border);
+  }
+  .proposal-section .section-label { color: var(--color-accent-brass); }
+  .proposal-section .section-text { color: var(--color-muted-dark); }
+  .proposal-badge {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    color: var(--color-proposal-ink);
+    background: var(--color-proposal-border);
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .proposal-section .section-title { color: var(--color-proposal-ink); }
+  .proposal-intro-card {
+    background: var(--color-surface);
+    border: 1px dashed var(--color-proposal-border);
+    border-radius: 10px;
+    padding: clamp(18px, 5vw, 28px);
+    margin-top: 20px;
+  }
+  .proposal-name { font-size: 19px; color: var(--color-ink); margin-bottom: 16px; }
+  .proposal-dl { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 0; }
+  .proposal-dl dt {
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    color: var(--color-proposal-text2);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .proposal-dl dd { margin: 0; font-size: 14.5px; color: var(--color-ink); }
+  .proposal-note {
+    margin-top: 20px;
     padding: 14px 16px;
-    background-color: var(--color-ivory-deep);
-    font-size: 0.85rem;
-    color: var(--color-brown-soft);
-    text-align: center;
+    background: var(--color-proposal-bg);
+    border-left: 3px solid var(--color-proposal-border);
+    font-size: 13px;
+    color: var(--color-proposal-ink);
   }
 
-  /* CTA */
-  .cta {
-    position: relative;
-    background-color: var(--color-ink);
-    background-image: radial-gradient(ellipse at 50% 40%, rgba(122, 31, 31, 0.22) 0%, transparent 60%);
-    color: var(--color-ivory);
-    text-align: center;
+  /* ------- demo widget ------- */
+  .demo-widget {
+    margin-top: 24px;
+    border: 1px solid var(--color-proposal-border);
+    border-radius: 10px;
+    background: var(--color-surface);
+    padding: clamp(18px, 5vw, 26px);
   }
-
-  .cta .section-title {
-    color: var(--color-ivory);
+  .demo-widget-title {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--color-proposal-text2);
+    margin-bottom: 10px;
   }
-
-  .cta .section-title::after {
-    color: var(--color-red);
+  .demo-intro p { font-size: 14px; color: var(--color-muted); margin-bottom: 16px; }
+  .demo-progress {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--color-proposal-text2);
+    margin-bottom: 14px;
   }
-
-  .cta-text {
-    max-width: 560px;
-    margin: 0 auto 40px;
-    color: var(--color-ivory-deep);
-    line-height: 2.1;
-    text-wrap: pretty;
+  .demo-step fieldset { border: none; padding: 0; margin: 0 0 18px; }
+  .demo-step legend {
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", "游明朝", serif;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding: 0;
   }
-
-  .cta-buttons {
-    display: inline-flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  /* モバイル時のみ改行を入れるための補助クラス */
-  .br-mobile {
-    display: none;
-  }
-
-  /* フッター */
-  .site-footer {
-    background-color: var(--color-brown);
-    color: var(--color-ivory-deep);
-    padding: 48px 0 32px;
-    text-align: center;
-  }
-
-  .site-footer .footer-title {
-    font-size: 1.1rem;
-    letter-spacing: 0.15em;
-    color: var(--color-ivory);
-    margin-bottom: 18px;
-  }
-
-  .footer-nav {
-    margin-bottom: 24px;
-  }
-
-  .footer-nav a {
-    display: inline-flex;
+  .demo-options { display: flex; flex-direction: column; gap: 10px; }
+  .demo-option { display: block; position: relative; }
+  .demo-option input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .demo-option span {
+    display: flex;
     align-items: center;
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 14.5px;
+    background: var(--color-paper);
     min-height: 44px;
-    font-size: 0.9rem;
-    border-bottom: 1px solid rgba(244, 236, 223, 0.5);
-    padding: 4px 2px;
+  }
+  .demo-option input:checked + span {
+    border-color: var(--color-proposal-border);
+    background: var(--color-proposal-bg);
+    color: var(--color-proposal-ink);
+    font-weight: 600;
+  }
+  .demo-option input:focus-visible + span {
+    outline: 3px solid var(--color-accent-deep);
+    outline-offset: 2px;
+  }
+  .demo-nav { display: flex; gap: 10px; flex-wrap: wrap; }
+  .demo-nav .btn { flex: 1 1 120px; }
+  .demo-error { font-size: 13px; color: #9a3b2a; margin-bottom: 12px; }
+  .demo-result-name {
+    font-size: 19px;
+    color: var(--color-ink);
+    margin-bottom: 14px;
+  }
+  .demo-summary { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 16px 0; }
+  .demo-summary dt { font-size: 12px; color: var(--color-muted); }
+  .demo-summary dd { margin: 2px 0 0; font-size: 14.5px; }
+  .demo-disclaimer {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: var(--color-proposal-bg);
+    border-left: 3px solid var(--color-proposal-border);
+    font-size: 13px;
+    color: var(--color-proposal-ink);
+  }
+  .demo-status { position: absolute; left: -9999px; }
+  .demo-noscript {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: var(--color-paper-deep);
+    border-radius: 8px;
+    font-size: 13px;
+    color: var(--color-muted);
   }
 
-  .footer-nav a:hover,
-  .footer-nav a:focus-visible {
-    color: var(--color-ivory);
-    border-color: var(--color-ivory);
+  /* ------- info ------- */
+  .info-table { margin-top: 22px; border-top: 1px solid var(--color-border); }
+  .info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .info-row dt { font-size: 12.5px; color: var(--color-muted); letter-spacing: 0.06em; }
+  .info-row dd { margin: 0; font-size: 15px; overflow-wrap: anywhere; }
+  .info-row dd a { text-decoration: underline; }
+
+  .final-cta { text-align: center; }
+  .final-cta .section-text { margin: 0 auto 24px; text-align: center; }
+  .final-cta .cta-group { max-width: 360px; }
+
+  /* ------- footer ------- */
+  footer.site-footer {
+    padding: 32px 0;
+    text-align: center;
+    font-size: 13px;
+  }
+  footer.site-footer .brand {
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", "游明朝", serif;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+    color: var(--color-light-text);
+  }
+  footer.site-footer a { color: var(--color-muted-dark); overflow-wrap: anywhere; }
+  footer.site-footer .copyright { margin-top: 12px; color: #8f8171; font-size: 12px; }
+
+  @media (min-width: 640px) {
+    .card-grid { grid-template-columns: repeat(2, 1fr); }
+    .strength-card h3 { min-height: 3em; }
+    .strength-card .value-tag { min-height: 57px; }
+    .exp-grid { grid-template-columns: repeat(3, 1fr); }
+    .cta-group { flex-direction: row; max-width: none; justify-content: center; }
+    .btn { flex: 0 1 220px; }
+    .proposal-dl { grid-template-columns: repeat(2, 1fr); }
+    .demo-options { flex-direction: row; flex-wrap: wrap; }
+    .demo-option { flex: 1 1 45%; }
+    .demo-summary { grid-template-columns: repeat(2, 1fr); }
+    #strengths .container { max-width: 1080px; }
   }
 
-  .copyright {
-    font-size: 0.78rem;
-    color: rgba(244, 236, 223, 0.6);
-    letter-spacing: 0.05em;
-  }
-
-  /* レスポンシブ */
-  @media (max-width: 860px) {
-    .cards {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .gallery-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @media (max-width: 600px) {
-    body {
-      letter-spacing: 0.01em;
-    }
-
-    .br-mobile {
-      display: inline;
-    }
-
-    .inner {
-      padding: 0 14px;
-    }
-
-    .site-logo {
-      top: 14px;
-      left: 14px;
-    }
-
-    .site-logo img {
-      height: 46px;
-    }
-
-    section {
-      padding: 64px 0;
-    }
-
-    .cards {
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    .gallery-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    .gallery-item img {
-      height: 220px;
-    }
-
-    .hero {
-      min-height: 100vh;
-    }
-
-    .hero-content {
-      padding: 24px 14px;
-    }
-
-    .concept-text {
-      font-size: 1rem;
-      line-height: 2.1;
-    }
-
-    .info-detail dl {
-      grid-template-columns: 1fr;
-      gap: 6px;
-    }
-
-    .btn {
-      width: 100%;
-      max-width: 320px;
-    }
-
-    .cta-buttons {
-      flex-direction: column;
-      width: 100%;
-      align-items: center;
-    }
+  @media (min-width: 900px) {
+    .card-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero .container { max-width: 900px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-
-    * {
-      transition: none !important;
-      animation: none !important;
-    }
+    * { animation: none !important; transition: none !important; }
   }
+
+  /* ===== べた塗り背景のボタン・ラベル（コントラスト比 4.5 以上を確保） ===== */
+  .proposal-badge { background: #586b61; }
+
 </style>
 </head>
 <body>
 
-<a class="site-logo" href="../../../" aria-label="赤居文庫 トップページへ戻る">
-  <img src="images/logo.png" alt="赤居文庫 本と珈琲とインクの匂い">
-</a>
+<a class="skip-link" href="#main">本文へ移動</a>
 
-<main>
+<!-- 提案用ラベル -->
+<div class="proposal-flag" role="note">
+  CONCEPT LP／店舗向け提案用ページ・本ページには未導入の提案が含まれます
+</div>
 
-  <section class="hero" aria-label="赤居文庫 ファーストビュー">
-    <img class="hero-image" src="images/hero.jpg" alt="赤居文庫の冊子と一杯の珈琲">
-    <div class="hero-overlay" aria-hidden="true"></div>
-    <div class="hero-content">
-      <h1 class="brand">赤居文庫</h1>
-      <p class="copy">本と珈琲とインクの匂い</p>
+<!-- ヘッダー -->
+
+<main id="main">
+
+  <!-- ファーストビュー -->
+  <section class="hero theme-dark" aria-labelledby="hero-title">
+    <img class="hero-photo" src="images/hero-interior.jpg" alt="本とアンティークに囲まれた読書の時間を表現したイメージ画像" width="1200" height="675" fetchpriority="high">
+    <div class="hero-photo-overlay" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+      <p class="eyebrow">秋田市中通</p>
+      <h1 id="hero-title">Cafe 赤居文庫</h1>
+      <p class="catch">-本と珈琲とインクの匂い-</p>
+      <p class="hero-catch">読みかけのページと、淹れたての一杯を。</p>
       <p class="lead">
-        古い紙の匂いに包まれながら、<br class="br-mobile">一杯の珈琲とともに<br>
-        静かにページをめくる時間を。<br>
-        赤居文庫は、そんなひとときを<br class="br-mobile">ご案内する場所です。
+        本とアンティークに囲まれた店内で、注文を受けてから豆を挽くハンドドリップ珈琲を。Wi-Fiと電源のある席で、読書や仕事をしながらゆっくり過ごせるブックカフェです。
       </p>
-      <a class="btn btn-solid" href="#concept">赤居文庫について見る</a>
-    </div>
-  </section>
-
-  <section id="concept" class="concept" aria-labelledby="concept-title">
-    <div class="inner">
-      <h2 id="concept-title" class="section-title">コンセプト</h2>
-      <div class="concept-text">
-        <p>
-          一冊の本を開くと、そこにはいつも、少しだけ違う時間が流れています。<br class="br-mobile">
-          ページをめくる指先に、紙とインクのかすかな匂いが触れる瞬間。<br class="br-mobile">
-          日常の喧騒から静かに離れ、物語の中に身を置くひととき。
-        </p>
-        <p>
-          そのそばには、いつも一杯の珈琲を。
-          湯気とともに立ちのぼる香りが、読書の時間をより深く、
-          より豊かなものへと変えてくれます。
-        </p>
-        <p>
-          赤居文庫は、本と珈琲、そして静けさが寄り添う場所。
-          忙しい日々のなかで、ほんの少しだけ、
-          自分自身のための時間を取り戻していただけたらと願っています。
-        </p>
+      <div class="cta-group">
+        <a class="btn btn-primary" href="https://www.instagram.com/cafe_akaibunko/" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
+        <a class="btn btn-outline" href="https://green-coffee-farm.com/akaibunko/" target="_blank" rel="noopener noreferrer">公式サイトを見る</a>
+      </div>
+      <p class="hero-note">※背景は店舗の世界観を表現したイメージ画像です</p>
       </div>
     </div>
   </section>
 
-  <section class="reasons" aria-labelledby="reasons-title">
-    <div class="inner">
-      <h2 id="reasons-title" class="section-title">赤居文庫が選ばれる3つの理由</h2>
-      <p class="section-lead">
-        ただ本と珈琲があるだけではない、赤居文庫ならではの過ごし方があります。
+  <div class="spine-row" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- コンセプト -->
+  <section id="concept" aria-labelledby="concept-title">
+    <div class="container">
+      <span class="section-label">CONCEPT</span>
+      <h2 id="concept-title" class="section-title">大切にしていること</h2>
+      <div class="media concept-media">
+        <img src="images/book-coffee-ink.jpg" alt="本と珈琲、インクの香りを表現したイメージ画像" loading="lazy" width="1200" height="900">
+      </div>
+      <p class="img-caption">※店舗の世界観を表現したイメージ画像です</p>
+      <p class="section-text">
+        店内にはテーブルごとにテーマを決めた本が並び、注文を受けてから豆を挽いてハンドドリップで淹れる一杯を楽しめます。本と珈琲、そしてインクの匂いに包まれながら過ごす時間を大切にしています。
       </p>
-      <div class="cards">
-        <article class="card">
-          <div class="card-photo-wrap">
-            <img class="card-photo" src="images/coffee_cup.jpg" alt="ハンドドリップで淹れた一杯の珈琲">
+    </div>
+  </section>
+
+  <!-- 企業・店舗の強み -->
+  <section id="strengths" class="surface" aria-labelledby="strengths-title">
+    <div class="container">
+      <span class="section-label">STRENGTHS</span>
+      <h2 id="strengths-title" class="section-title">赤居文庫の三つの魅力</h2>
+      <p class="section-text">確認できる公式情報をもとに整理した、3つの特徴です。</p>
+
+      <div class="card-grid">
+        <article class="strength-card">
+          <div class="media card-media">
+            <img src="images/antique-bookshelf.jpg" alt="本とアンティークが並ぶ店内の雰囲気を表現したイメージ画像" loading="lazy" width="1200" height="900">
           </div>
-          <div class="card-body">
-            <span class="card-number" aria-hidden="true">01</span>
-            <h3>一杯のための珈琲</h3>
-            <p>
-              注文をいただいてから豆を挽き、
-              一杯ずつハンドドリップで丁寧に淹れています。
-              挽きたての香りも、味わいのひとつです。
-            </p>
-          </div>
+          <span class="num">01</span>
+          <h3>本・アンティーク・手淹れ珈琲が重なる空間</h3>
+          <p>テーブルごとにテーマを決めた本が並び、注文を受けてから豆を挽いてハンドドリップする珈琲が楽しめる、独自の世界観の店内です。</p>
+          <span class="value-tag">本と珈琲、両方の魅力を同時に味わえます。</span>
         </article>
-        <article class="card">
-          <div class="card-photo-wrap">
-            <img class="card-photo" src="images/book_month.jpg" alt="今月の本のご案内バナー">
+        <article class="strength-card">
+          <div class="media card-media">
+            <img src="images/workspace.jpg" alt="Wi-Fiと電源のあるワークスペースを表現したイメージ画像" loading="lazy" width="1200" height="900">
           </div>
-          <div class="card-body">
-            <span class="card-number" aria-hidden="true">02</span>
-            <h3>テーブルごとの、小さな図書室</h3>
-            <p>
-              季節のテーマに沿って選ばれた本が、
-              テーブルにそっと置かれています。
-              ふと手にとった一冊が、新しい出会いになることも。
-            </p>
-          </div>
+          <span class="num">02</span>
+          <h3>長時間過ごしやすい環境</h3>
+          <p>Wi-Fiと電源のある席があり、読書や仕事をしながら長時間過ごしやすいブックカフェとして案内されています。</p>
+          <span class="value-tag">一人の時間も、作業の合間の一息にも使いやすい環境です。</span>
         </article>
-        <article class="card">
-          <div class="card-photo-wrap">
-            <img class="card-photo" src="images/banner_book2.jpg" alt="貸本コーナーのご案内バナー">
+        <article class="strength-card">
+          <div class="media card-media">
+            <img src="images/lending-books.jpg" alt="貸本コーナーの募金箱をイメージした画像" loading="lazy" width="1200" height="900">
           </div>
-          <div class="card-body">
-            <span class="card-number" aria-hidden="true">03</span>
-            <h3>貸本コーナーという、小さな社会貢献</h3>
-            <p>
-              本を借りられる方は、1冊につき50円の募金をお願いしています。<br class="br-mobile">
-              お預かりした募金は全額、
-              「絵本を届ける運動」へ寄付されます。
-            </p>
-          </div>
+          <span class="num">03</span>
+          <h3>貸本を通じた社会貢献</h3>
+          <p>店内の貸本コーナーは1冊につき50円の募金制で、集まった募金は全額「絵本を届ける運動」へ寄付されています。</p>
+          <span class="value-tag">本を借りて読むことが、そのまま社会貢献につながります。</span>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="stay" aria-labelledby="stay-title">
-    <div class="inner">
-      <h2 id="stay-title" class="section-title">赤居文庫での過ごし方</h2>
-      <p class="section-lead">
-        決まった作法はありません。ただ、あなたのペースで、
-        本と珈琲と静けさを味わっていただければと思います。
+  <!-- ブランドストーリー -->
+  <section id="story" class="theme-dark with-texture" aria-labelledby="story-title">
+    <div class="container">
+      <span class="section-label">STORY</span>
+      <h2 id="story-title" class="section-title">赤居文庫のあゆみ</h2>
+      <p class="section-text">
+        「秋田駅前でゆったり過ごせる場所を作りたい」という思いから生まれたブックカフェです。
       </p>
-      <div class="cards">
-        <article class="card card-no-photo">
-          <div class="card-body">
-            <span class="card-number" aria-hidden="true">01</span>
-            <h3>本を選ぶ</h3>
-            <p>
-              棚に並んだ古い文庫本の背表紙を、
-              ゆっくりと指でたどりながら。
-              今日の気分に寄り添う一冊を、
-              じっくりと探す時間そのものをお楽しみください。
-            </p>
-          </div>
-        </article>
-        <article class="card card-no-photo">
-          <div class="card-body">
-            <span class="card-number" aria-hidden="true">02</span>
-            <h3>珈琲を味わう</h3>
-            <p>
-              丁寧に淹れられた一杯の珈琲を、
-              香りごと味わうように。
-              本のページをめくる合間に、
-              静かなひと呼吸を添えてくれます。
-            </p>
-          </div>
-        </article>
-        <article class="card card-no-photo">
-          <div class="card-body">
-            <span class="card-number" aria-hidden="true">03</span>
-            <h3>静かな余白を楽しむ</h3>
-            <p>
-              何をするでもなく、ただ座っているだけの時間も。
-              騒がしい日常から少し離れて、
-              心にゆとりの余白が生まれていきます。
-            </p>
-          </div>
-        </article>
+      <ul class="story-list">
+        <li>
+          <span class="year">きっかけ</span>
+          秋田駅前でゆったり過ごせる場所を作りたいという思いから、店舗づくりが始まりました。
+        </li>
+        <li>
+          <span class="year">2019年9月</span>
+          元金物店を改装してオープン。古い庇などを残し、懐かしさを感じられる空間に再生しました。
+        </li>
+        <li>
+          <span class="year">現在</span>
+          本と珈琲、インクの匂いに包まれた店内で、貸本を通じた社会貢献も続けています。
+        </li>
+      </ul>
+      <div class="media story-media">
+        <img src="images/reading-time.jpg" alt="読書に没頭するひとときを表現したイメージ画像" loading="lazy" width="1200" height="900">
+      </div>
+      <p class="img-caption">※店舗の世界観を表現したイメージ画像です</p>
+    </div>
+  </section>
+
+  <div class="spine-row" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- 一押し商品・サービス -->
+  <section id="specialty" class="surface" aria-labelledby="specialty-title">
+    <div class="container">
+      <span class="section-label">SPECIALTY</span>
+      <h2 id="specialty-title" class="section-title">一押しのフードとひととき</h2>
+
+      <div class="specialty-block">
+        <div class="media specialty-media">
+          <img src="images/stew-rice.jpg" alt="煮込みシチューライスをイメージした画像" loading="lazy" width="1200" height="900">
+        </div>
+        <p class="img-caption">※店舗の世界観を表現したイメージ画像です</p>
+        <p class="specialty-kicker">一押し商品</p>
+        <h3>煮込みシチューライス</h3>
+        <p>ごはんと煮込みシチューを合わせた、ボリュームのある食事メニューです。</p>
+        <p>しっかり食事を楽しみたい方、ランチタイムに立ち寄りたい方に向いています。</p>
+        <p class="specialty-meta">価格・ご提供時間は、公式サイトまたはInstagramにてご確認ください。</p>
+      </div>
+
+      <div class="specialty-block">
+        <div class="media specialty-media">
+          <img src="images/hand-drip.jpg" alt="ハンドドリップ珈琲の抽出をイメージした画像" loading="lazy" width="1200" height="900">
+        </div>
+        <p class="img-caption">※店舗の世界観を表現したイメージ画像です</p>
+        <p class="specialty-kicker">一押しサービス</p>
+        <h3>本を読みながら楽しむハンドドリップ珈琲</h3>
+        <p>店内の本を読みながら、注文後に豆を挽いて淹れるハンドドリップコーヒーを楽しめます。貸本の募金は「絵本を届ける運動」へ寄付される仕組みです。</p>
+        <p>一人でゆっくり読書したい方、静かに過ごしたい方におすすめです。</p>
       </div>
     </div>
   </section>
 
-  <section class="menu" aria-labelledby="menu-title">
-    <div class="inner">
-      <h2 id="menu-title" class="section-title">おすすめメニュー</h2>
-      <p class="section-lead">
-        赤居文庫の珈琲には、<br>
-        ちょっとした物語があります。
-      </p>
-      <div class="menu-feature">
-        <img src="images/banner_flour.jpg" alt="コーヒーフラワーのご案内バナー">
-        <div class="menu-feature-body">
-          <h3>コーヒーフラワーのケーキ</h3>
-          <p>
-            当店のケーキには、コーヒーの果実からつくられる
-            「コーヒーフラワー」を使用しています。
-            一杯の珈琲を味わうことが、
-            コーヒー生産にまつわる資源を無駄にしない取り組みにも、
-            そっとつながっています。
-          </p>
+  <!-- 店舗での過ごし方 -->
+  <section id="experience" aria-labelledby="experience-title">
+    <div class="container">
+      <span class="section-label">HOW TO ENJOY</span>
+      <h2 id="experience-title" class="section-title">赤居文庫での過ごし方</h2>
+      <div class="exp-grid">
+        <div class="exp-item">
+          <span class="exp-thumb"><img src="images/window-seat.jpg" alt="" loading="lazy" width="44" height="44"></span>
+          <div>
+            <h3>本を読みながら過ごす</h3>
+            <p>テーブルごとにテーマの異なる本の中から、気になる一冊を手に取れます。</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h3>淹れたての珈琲を待つ時間も楽しむ</h3>
+            <p>注文後に豆を挽くハンドドリップならではの、香りが立つひとときです。</p>
+          </div>
+        </div>
+        <div class="exp-item">
+          <span class="mark" aria-hidden="true"></span>
+          <div>
+            <h3>Wi-Fi・電源で作業や読書に集中する</h3>
+            <p>長時間過ごしやすい環境で、仕事や読書に集中できます。</p>
+          </div>
         </div>
       </div>
-      <p class="menu-note">
-        そのほかのメニューにつきましては、最新情報は店舗の公式案内をご確認ください。
-      </p>
     </div>
   </section>
 
-  <section class="info" aria-labelledby="info-title">
-    <div class="inner">
-      <h2 id="info-title" class="section-title">店舗情報</h2>
-      <div class="info-text">
-        <p>
-          赤居文庫は、古い文庫本と珈琲の香りに包まれた、
-          落ち着いた喫茶空間です。<br class="br-mobile">
-          静かに読書を楽しみたい方、
-          ひとりの時間をゆっくりと過ごしたい方のための場所として、<br class="br-mobile">
-          日々お迎えしております。
-        </p>
+  <!-- 動く新サービス試作 -->
+  <section id="pairing-demo" class="proposal-section" aria-labelledby="pairing-demo-title">
+    <div class="container">
+      <span class="proposal-badge">INTERACTIVE PROTOTYPE・動く新サービス試作</span>
+      <h2 id="pairing-demo-title" class="section-title">本と珈琲のペアリング診断（試作デモ）</h2>
+      <p class="section-text">
+        今日の気分や好みに合わせて、本と珈琲の組み合わせのヒントを紹介する試作デモです。既存の魅力を生かした、小さく試せる新サービスの提案です。
+      </p>
+
+      <div class="proposal-intro-card">
+        <p class="proposal-name">本と珈琲のペアリング診断サービス（案）</p>
+        <dl class="proposal-dl">
+          <div>
+            <dt>対象となるお客様</dt>
+            <dd>本のジャンルや珈琲の好みで、何を選べばよいか迷う方</dd>
+          </div>
+          <div>
+            <dt>解決する課題</dt>
+            <dd>本の種類が多く選びにくい、珈琲の好みに合わせた選び方が分かりにくいという迷い</dd>
+          </div>
+          <div>
+            <dt>サービス内容</dt>
+            <dd>気分や好みを選ぶだけで、相性の良い本のジャンルと珈琲のタイプの組み合わせを案内する仕組み</dd>
+          </div>
+          <div>
+            <dt>店舗の強みとの相性</dt>
+            <dd>テーマ別の貸本と、注文後に豆を挽くハンドドリップという強みを、選び方の入り口として生かせます</dd>
+          </div>
+          <div>
+            <dt>お客様のメリット</dt>
+            <dd>数多くの本と珈琲の中から、その日の気分に合う組み合わせを見つけやすくなります</dd>
+          </div>
+          <div>
+            <dt>店舗側のメリット</dt>
+            <dd>スタッフへの相談が少ない時間帯でも、選び方の案内を補えます</dd>
+          </div>
+          <div>
+            <dt>小さく始める方法</dt>
+            <dd>まずは店頭のPOPやSNSで、今回のような簡易診断を試験的に案内することから始められます</dd>
+          </div>
+          <div>
+            <dt>実施前に確認すべき点</dt>
+            <dd>貸本の在庫状況やスタッフの案内体制に合わせた、案内範囲の調整</dd>
+          </div>
+        </dl>
+        <p class="proposal-note">本内容は店舗運営者向けの導入提案です。現在提供中のサービスではありません。</p>
+
+        <!-- 試作デモ本体 -->
+        <div class="demo-widget" id="pairing-demo-widget">
+          <p class="demo-widget-title">試作デモ（動く簡易プロトタイプ）</p>
+          <div aria-live="polite" class="demo-status" id="demo-status"></div>
+
+          <noscript>
+            <p class="demo-noscript">この試作デモの操作にはJavaScriptが必要です。JavaScriptが無効な場合でも、店舗情報や上記の店舗紹介はそのままご覧いただけます。</p>
+          </noscript>
+
+          <div class="demo-intro" id="demo-intro">
+            <p>5つの質問に答えると、本と珈琲の組み合わせのヒントが表示されます。入力内容の保存・送信は行われません。</p>
+            <button type="button" class="btn btn-primary" id="demo-start-btn">試してみる</button>
+          </div>
+
+          <form class="demo-form" id="demo-form" hidden novalidate>
+
+            <p class="demo-progress">STEP <span id="demo-current-step">1</span> / 5</p>
+
+            <div class="demo-step" id="demo-step-1" data-step="1">
+              <fieldset>
+                <legend>1. 今日はどんな気分で過ごしたいですか？</legend>
+                <p class="demo-error" id="demo-error-1" hidden>いずれかを選択してください。</p>
+                <div class="demo-options">
+                  <label class="demo-option"><input type="radio" name="q1" value="A"><span>じっくり集中して読みたい</span></label>
+                  <label class="demo-option"><input type="radio" name="q1" value="B"><span>ゆったりくつろぎたい</span></label>
+                  <label class="demo-option"><input type="radio" name="q1" value="C"><span>好奇心をくすぐられたい</span></label>
+                  <label class="demo-option"><input type="radio" name="q1" value="D"><span>気分転換をしたい</span></label>
+                  <label class="demo-option"><input type="radio" name="q1" value="E"><span>誰かと話しながら過ごしたい</span></label>
+                </div>
+              </fieldset>
+              <div class="demo-nav">
+                <button type="button" class="btn btn-primary demo-next" data-current="1" data-target="2">次へ</button>
+              </div>
+            </div>
+
+            <div class="demo-step" id="demo-step-2" data-step="2" hidden>
+              <fieldset>
+                <legend>2. 珈琲の好みに近いのは？</legend>
+                <p class="demo-error" id="demo-error-2" hidden>いずれかを選択してください。</p>
+                <div class="demo-options">
+                  <label class="demo-option"><input type="radio" name="q2" value="A"><span>苦味とコクをしっかり感じたい</span></label>
+                  <label class="demo-option"><input type="radio" name="q2" value="B"><span>酸味と香りを楽しみたい</span></label>
+                  <label class="demo-option"><input type="radio" name="q2" value="C"><span>ミルクを合わせてまろやかに</span></label>
+                  <label class="demo-option"><input type="radio" name="q2" value="D"><span>サッパリ冷たい一杯がいい</span></label>
+                  <label class="demo-option"><input type="radio" name="q2" value="E"><span>まだ決めていない・相談したい</span></label>
+                </div>
+              </fieldset>
+              <div class="demo-nav">
+                <button type="button" class="btn btn-outline demo-back" data-target="1">戻る</button>
+                <button type="button" class="btn btn-primary demo-next" data-current="2" data-target="3">次へ</button>
+              </div>
+            </div>
+
+            <div class="demo-step" id="demo-step-3" data-step="3" hidden>
+              <fieldset>
+                <legend>3. 好きな本のジャンルに近いのは？</legend>
+                <p class="demo-error" id="demo-error-3" hidden>いずれかを選択してください。</p>
+                <div class="demo-options">
+                  <label class="demo-option"><input type="radio" name="q3" value="A"><span>小説・物語</span></label>
+                  <label class="demo-option"><input type="radio" name="q3" value="B"><span>エッセイ・随筆</span></label>
+                  <label class="demo-option"><input type="radio" name="q3" value="C"><span>写真集・アート</span></label>
+                  <label class="demo-option"><input type="radio" name="q3" value="D"><span>実用書・ビジネス書</span></label>
+                  <label class="demo-option"><input type="radio" name="q3" value="E"><span>まだ決めていない</span></label>
+                </div>
+              </fieldset>
+              <div class="demo-nav">
+                <button type="button" class="btn btn-outline demo-back" data-target="2">戻る</button>
+                <button type="button" class="btn btn-primary demo-next" data-current="3" data-target="4">次へ</button>
+              </div>
+            </div>
+
+            <div class="demo-step" id="demo-step-4" data-step="4" hidden>
+              <fieldset>
+                <legend>4. 滞在時間の目安は？</legend>
+                <p class="demo-error" id="demo-error-4" hidden>いずれかを選択してください。</p>
+                <div class="demo-options">
+                  <label class="demo-option"><input type="radio" name="q4" value="D"><span>30分程度</span></label>
+                  <label class="demo-option"><input type="radio" name="q4" value="B"><span>1時間程度</span></label>
+                  <label class="demo-option"><input type="radio" name="q4" value="A"><span>2時間以上ゆっくり</span></label>
+                  <label class="demo-option"><input type="radio" name="q4" value="C"><span>気分次第で決めたい</span></label>
+                  <label class="demo-option"><input type="radio" name="q4" value="E"><span>相談しながら決めたい</span></label>
+                </div>
+              </fieldset>
+              <div class="demo-nav">
+                <button type="button" class="btn btn-outline demo-back" data-target="3">戻る</button>
+                <button type="button" class="btn btn-primary demo-next" data-current="4" data-target="5">次へ</button>
+              </div>
+            </div>
+
+            <div class="demo-step" id="demo-step-5" data-step="5" hidden>
+              <fieldset>
+                <legend>5. 今日はどんな時間を過ごしたいですか？</legend>
+                <p class="demo-error" id="demo-error-5" hidden>いずれかを選択してください。</p>
+                <div class="demo-options">
+                  <label class="demo-option"><input type="radio" name="q5" value="A"><span>一人の時間に没頭したい</span></label>
+                  <label class="demo-option"><input type="radio" name="q5" value="B"><span>心を落ち着けたい</span></label>
+                  <label class="demo-option"><input type="radio" name="q5" value="C"><span>新しい発見がほしい</span></label>
+                  <label class="demo-option"><input type="radio" name="q5" value="D"><span>気分を変えたい</span></label>
+                  <label class="demo-option"><input type="radio" name="q5" value="E"><span>スタッフとの会話も楽しみたい</span></label>
+                </div>
+              </fieldset>
+              <div class="demo-nav">
+                <button type="button" class="btn btn-outline demo-back" data-target="4">戻る</button>
+                <button type="button" class="btn btn-primary" id="demo-confirm-btn">診断結果を見る</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="demo-result" id="demo-result" hidden>
+            <h3 class="demo-result-name" id="demo-result-name"></h3>
+            <dl class="demo-summary" id="demo-summary"></dl>
+            <p class="demo-disclaimer">本機能は店舗運営者向けの試作デモです。現在提供中の正式サービスではありません。入力内容の保存・送信は行いません。</p>
+            <div class="demo-nav">
+              <a class="btn btn-outline" href="#specialty">一押し商品・サービスを見る</a>
+              <button type="button" class="btn btn-outline" id="demo-reset-btn">最初からやり直す</button>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="info-detail">
-        <dl>
-          <dt>店名</dt>
-          <dd>赤居文庫</dd>
+  <div class="spine-row" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
 
+  <!-- 店舗情報 -->
+  <section id="info" aria-labelledby="info-title">
+    <div class="container">
+      <span class="section-label">INFORMATION</span>
+      <h2 id="info-title" class="section-title">店舗情報</h2>
+
+      <dl class="info-table">
+        <div class="info-row">
+          <dt>店舗名</dt>
+          <dd>Cafe 赤居文庫 -本と珈琲とインクの匂い-</dd>
+        </div>
+        <div class="info-row">
           <dt>住所</dt>
-          <dd>〒010-0001<br>秋田県秋田市中通4-6-16　M's Birudjingu 1F</dd>
-
-          <dt>TEL</dt>
+          <dd>秋田県秋田市中通4-6-16 M'sビルヂング1F</dd>
+        </div>
+        <div class="info-row">
+          <dt>電話番号</dt>
           <dd><a href="tel:0188015001">018-801-5001</a></dd>
-
+        </div>
+        <div class="info-row">
           <dt>営業時間</dt>
           <dd>
-            月～木　8:00～19:00<br>
-            金　8:00～21:00<br>
-            土・祝前日　7:00～21:00<br>
-            日・祝日　7:00～19:00<br>
-            （グッドモーニング　毎日OPEN～11:00）
+            月〜木 8:00〜19:00<br>
+            金 8:00〜21:00<br>
+            土・祝前日 7:00〜21:00<br>
+            日・祝日 7:00〜19:00<br>
+            （グッドモーニング 毎日OPEN〜11:00）
           </dd>
-
-          <dt>Instagram</dt>
-          <dd><a href="https://www.instagram.com/cafe_akaibunko/" target="_blank" rel="noopener noreferrer">@cafe_akaibunko（外部サイトへ移動します）</a></dd>
-
-          <dt>Twitter</dt>
-          <dd><a href="https://twitter.com/akaibunko" target="_blank" rel="noopener noreferrer">@akaibunko（外部サイトへ移動します）</a></dd>
-        </dl>
-      </div>
-
-      <div class="info-map" id="map">
-        <div class="info-map-frame-wrap">
-          <iframe
-            src="https://www.google.com/maps?q=%E7%A7%8B%E7%94%B0%E7%9C%8C%E7%A7%8B%E7%94%B0%E5%B8%82%E4%B8%AD%E9%80%9A4-6-16&output=embed"
-            title="赤居文庫の地図（秋田県秋田市中通4-6-16）"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            aria-label="赤居文庫の所在地を示すGoogleマップ">
-          </iframe>
         </div>
-      </div>
+        <div class="info-row">
+          <dt>公式サイト</dt>
+          <dd><a href="https://green-coffee-farm.com/akaibunko/" target="_blank" rel="noopener noreferrer">https://green-coffee-farm.com/akaibunko/</a></dd>
+        </div>
+        <div class="info-row">
+          <dt>Instagram</dt>
+          <dd><a href="https://www.instagram.com/cafe_akaibunko/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/cafe_akaibunko/</a></dd>
+        </div>
+        <div class="info-row">
+          <dt>X（Twitter）</dt>
+          <dd><a href="https://twitter.com/akaibunko" target="_blank" rel="noopener noreferrer">https://twitter.com/akaibunko</a></dd>
+        </div>
+        <div class="info-row">
+          <dt>貸本について</dt>
+          <dd>1冊につき50円の募金制。募金は全額「絵本を届ける運動」へ寄付されます。</dd>
+        </div>
+      </dl>
 
-      <p class="info-note">
-        上記情報は変更となる場合がございます。最新情報は店舗の公式案内をご確認ください。
+      <p class="section-text" style="margin-top: 18px; font-size: 13px; color: var(--color-muted);">
+        最新の営業情報は、店舗の公式案内をご確認ください。
       </p>
     </div>
   </section>
 
-  <section class="gallery" aria-labelledby="gallery-title">
-    <div class="inner">
-      <h2 id="gallery-title" class="section-title">店内ギャラリー</h2>
-      <p class="section-lead">
-        本と珈琲、そして静けさに包まれた店内の一場面を、
-        写真でご紹介します。
+  <!-- CTA -->
+  <section class="final-cta theme-dark with-texture" aria-labelledby="final-cta-title">
+    <div class="container">
+      <span class="section-label">VISIT</span>
+      <h2 id="final-cta-title" class="section-title">赤居文庫を訪ねる</h2>
+      <p class="section-text">
+        本と珈琲に囲まれたひとときを、ぜひ体験しにお越しください。
       </p>
-      <div class="gallery-grid">
-        <figure class="gallery-item">
-          <img src="images/shop_table.jpg" alt="落ち着いた雰囲気の店内座席">
-          <figcaption class="gallery-caption">店内座席</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="images/shop_coffee.jpg" alt="テーブルに置かれた一杯の珈琲">
-          <figcaption class="gallery-caption">珈琲の時間</figcaption>
-        </figure>
-        <figure class="gallery-item">
-          <img src="images/shop_books.jpg" alt="本棚とタイプライターが並ぶ店内の様子">
-          <figcaption class="gallery-caption">本棚のある風景</figcaption>
-        </figure>
+      <div class="media final-media">
+        <img src="images/exterior.jpg" alt="店舗の外観をイメージした画像" loading="lazy" width="1200" height="900">
       </div>
-    </div>
-  </section>
-
-  <section class="cta" aria-labelledby="cta-title">
-    <div class="inner">
-      <h2 id="cta-title" class="section-title">赤居文庫へ</h2>
-      <p class="cta-text">
-        本と珈琲とインクの匂いに包まれる、静かな時間へ。
-        地図でお店を探すか、Instagramで最新の様子をご覧ください。
+      <p class="img-caption">※店舗の世界観を表現したイメージ画像です</p>
+      <div class="cta-group">
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=%E7%A7%8B%E7%94%B0%E7%9C%8C%E7%A7%8B%E7%94%B0%E5%B8%82%E4%B8%AD%E9%80%9A4-6-16" target="_blank" rel="noopener noreferrer">地図を見る</a>
+        <a class="btn btn-outline" href="tel:0188015001">電話をかける</a>
+      </div>
+      <p style="margin-top: 16px;">
+        <a href="https://dlfoods.stores.jp/items/64ee969e6e44950048cc1086" target="_blank" rel="noopener noreferrer">コーヒー豆を購入する（公式オンラインショップ）</a>
       </p>
-      <div class="cta-buttons">
-        <a class="btn btn-solid" href="#map">地図を見る</a>
-        <a class="btn" href="https://www.instagram.com/cafe_akaibunko/" target="_blank" rel="noopener noreferrer">Instagram</a>
-      </div>
+      <p style="margin-top: 24px;">
+        <a class="back-top" href="../../../">トップページへ戻る</a>
+      </p>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="inner">
-    <p class="footer-title">赤居文庫</p>
-    <nav class="footer-nav" aria-label="フッターナビゲーション">
-      <a href="../../../">トップページへ戻る</a>
-    </nav>
-    <p class="copyright">&copy; 赤居文庫. All Rights Reserved.</p>
+<!-- フッター -->
+<footer class="site-footer theme-dark with-texture">
+  <div class="container">
+    <p class="brand">Cafe 赤居文庫</p>
+    <p><a href="../../../">トップページへ戻る</a></p>
+    <p class="copyright">© Cafe 赤居文庫. All Rights Reserved.</p>
   </div>
 </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Cafe 赤居文庫",
+  "url": "https://green-coffee-farm.com/akaibunko/",
+  "telephone": "018-801-5001",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "JP",
+    "addressRegion": "秋田県",
+    "addressLocality": "秋田市",
+    "streetAddress": "中通4-6-16 M'sビルヂング1F"
+  },
+  "sameAs": [
+    "https://www.instagram.com/cafe_akaibunko/",
+    "https://twitter.com/akaibunko"
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+
+  var startBtn = document.getElementById("demo-start-btn");
+  var intro = document.getElementById("demo-intro");
+  var form = document.getElementById("demo-form");
+  var result = document.getElementById("demo-result");
+  var resultName = document.getElementById("demo-result-name");
+  var summary = document.getElementById("demo-summary");
+  var resetBtn = document.getElementById("demo-reset-btn");
+  var confirmBtn = document.getElementById("demo-confirm-btn");
+  var status = document.getElementById("demo-status");
+  var TOTAL_STEPS = 5;
+
+  // 結果カテゴリ定義（判定はA〜Eの合計得点が最も多いカテゴリ。同点時はA>B>C>D>Eの優先順位で決定）
+  var RESULTS = {
+    A: {
+      name: "集中・没頭タイプ",
+      summary: "じっくり物語に浸りながら、コクのある一杯を味わいたい方向けの組み合わせです。",
+      reason: "「じっくり集中して読みたい」「苦味とコクを楽しみたい」といった回答から近いタイプです。",
+      recommend: "苦味とコクを楽しむ珈琲と、小説・物語のジャンル",
+      strength: "全席Wi-Fi・電源完備で長時間過ごしやすい環境と、注文後に豆を挽くハンドドリップが相性良く楽しめます。"
+    },
+    B: {
+      name: "香り探求タイプ",
+      summary: "香り豊かな一杯とともに、エッセイや随筆でゆったりした時間を過ごしたい方向けの組み合わせです。",
+      reason: "「ゆったりくつろぎたい」「酸味と香りを楽しみたい」といった回答から近いタイプです。",
+      recommend: "酸味と香りを楽しむ軽やかな珈琲と、エッセイ・随筆のジャンル",
+      strength: "注文を受けてから豆を挽くハンドドリップで、香りの立つ一杯を楽しめます。"
+    },
+    C: {
+      name: "まろやかリラックスタイプ",
+      summary: "ミルクを合わせた優しい一杯と、写真集やアートの本で気分転換したい方向けの組み合わせです。",
+      reason: "「好奇心をくすぐられたい」「ミルクを合わせてまろやかに」といった回答から近いタイプです。",
+      recommend: "ミルクを合わせたまろやかな珈琲と、写真集・アート系のジャンル",
+      strength: "テーブルごとにテーマの異なる本があり、気分転換の一冊を見つけやすい環境です。"
+    },
+    D: {
+      name: "さっぱり気分転換タイプ",
+      summary: "サッパリとした一杯で気分を切り替えながら、実用書などで集中したい方向けの組み合わせです。",
+      reason: "「気分転換をしたい」「サッパリ冷たい一杯がいい」といった回答から近いタイプです。",
+      recommend: "サッパリとした冷たい一杯と、実用書・ビジネス書のジャンル",
+      strength: "Wi-Fi・電源が整っているため、仕事や作業の合間の気分転換にも向いています。"
+    },
+    E: {
+      name: "相談しながら選びたいタイプ",
+      summary: "珈琲も本も、スタッフに相談しながら選びたい方向けの組み合わせです。",
+      reason: "「誰かと話しながら過ごしたい」「まだ決めていない」といった回答から近いタイプです。",
+      recommend: "相談しながら選ぶハンドドリップ珈琲と、貸本コーナーの一冊",
+      strength: "豆を挽くところから相談できるハンドドリップと、貸本コーナーでのやり取りを楽しめます。"
+    }
+  };
+  var PRIORITY_ORDER = ["A", "B", "C", "D", "E"];
+
+  function announce(text) {
+    if (status) { status.textContent = text; }
+  }
+
+  function showStep(n) {
+    var steps = form.querySelectorAll(".demo-step");
+    for (var i = 0; i < steps.length; i++) {
+      steps[i].hidden = steps[i].getAttribute("data-step") !== String(n);
+    }
+    var stepCounter = document.getElementById("demo-current-step");
+    if (stepCounter) { stepCounter.textContent = n; }
+    var current = document.getElementById("demo-step-" + n);
+    if (current) {
+      var legend = current.querySelector("legend");
+      announce("STEP " + n + " / " + TOTAL_STEPS + " " + (legend ? legend.textContent : ""));
+      var firstInput = current.querySelector("input");
+      if (firstInput) { firstInput.focus(); }
+    }
+  }
+
+  function getChecked(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : null;
+  }
+
+  if (startBtn) {
+    startBtn.addEventListener("click", function () {
+      intro.hidden = true;
+      form.hidden = false;
+      showStep(1);
+    });
+  }
+
+  var nextButtons = form.querySelectorAll(".demo-next");
+  for (var i = 0; i < nextButtons.length; i++) {
+    nextButtons[i].addEventListener("click", function (e) {
+      var currentStep = e.target.getAttribute("data-current");
+      var targetStep = e.target.getAttribute("data-target");
+      var fieldName = "q" + currentStep;
+      var errorEl = document.getElementById("demo-error-" + currentStep);
+
+      if (!getChecked(fieldName)) {
+        if (errorEl) { errorEl.hidden = false; }
+        return;
+      }
+      if (errorEl) { errorEl.hidden = true; }
+      showStep(targetStep);
+    });
+  }
+
+  var backButtons = form.querySelectorAll(".demo-back");
+  for (var j = 0; j < backButtons.length; j++) {
+    backButtons[j].addEventListener("click", function (e) {
+      var targetStep = e.target.getAttribute("data-target");
+      showStep(targetStep);
+    });
+  }
+
+  if (confirmBtn) {
+    confirmBtn.addEventListener("click", function () {
+      var errorEl = document.getElementById("demo-error-5");
+      var q5 = getChecked("q5");
+      if (!q5) {
+        if (errorEl) { errorEl.hidden = false; }
+        return;
+      }
+      if (errorEl) { errorEl.hidden = true; }
+
+      var scores = { A: 0, B: 0, C: 0, D: 0, E: 0 };
+      for (var q = 1; q <= 5; q++) {
+        var val = getChecked("q" + q);
+        if (val && scores.hasOwnProperty(val)) { scores[val] += 1; }
+      }
+
+      var topKey = PRIORITY_ORDER[0];
+      var topScore = -1;
+      for (var k = 0; k < PRIORITY_ORDER.length; k++) {
+        var key = PRIORITY_ORDER[k];
+        if (scores[key] > topScore) {
+          topScore = scores[key];
+          topKey = key;
+        }
+      }
+
+      var resultData = RESULTS[topKey];
+      resultName.textContent = resultData.name;
+
+      summary.innerHTML = "";
+      var items = [
+        ["要約", resultData.summary],
+        ["この結果になった理由", resultData.reason],
+        ["おすすめ候補", resultData.recommend],
+        ["店舗の強みとのつながり", resultData.strength]
+      ];
+      for (var m = 0; m < items.length; m++) {
+        var dt = document.createElement("dt");
+        dt.textContent = items[m][0];
+        var dd = document.createElement("dd");
+        dd.textContent = items[m][1];
+        summary.appendChild(dt);
+        summary.appendChild(dd);
+      }
+
+      form.hidden = true;
+      result.hidden = false;
+      announce("診断結果を表示しました。本機能は試作デモです。正式サービスではありません。");
+      resultName.setAttribute("tabindex", "-1");
+      resultName.focus();
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      var radios = form.querySelectorAll('input[type="radio"]');
+      for (var m = 0; m < radios.length; m++) { radios[m].checked = false; }
+      var errors = form.querySelectorAll(".demo-error");
+      for (var n = 0; n < errors.length; n++) { errors[n].hidden = true; }
+
+      var steps = form.querySelectorAll(".demo-step");
+      for (var s = 0; s < steps.length; s++) {
+        steps[s].hidden = steps[s].getAttribute("data-step") !== "1";
+      }
+      var stepCounter = document.getElementById("demo-current-step");
+      if (stepCounter) { stepCounter.textContent = "1"; }
+
+      result.hidden = true;
+      form.hidden = true;
+      intro.hidden = false;
+      announce("最初の画面に戻りました。");
+      startBtn.focus();
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
